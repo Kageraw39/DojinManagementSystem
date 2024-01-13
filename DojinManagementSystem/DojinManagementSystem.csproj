@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07EDAE37-E3DE-4E3F-A430-6908A670D783}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DojinManagementSystem</RootNamespace>
+    <AssemblyName>DojinManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\DateTimeInputer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DateTimeInputer.Designer.cs">
+      <DependentUpon>DateTimeInputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoPanel.Designer.cs">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\CommonEntity.cs" />
+    <Compile Include="Entity\MastaBuyWay.cs" />
+    <Compile Include="Entity\MastaChara.cs" />
+    <Compile Include="Entity\MastaCircle.cs" />
+    <Compile Include="Entity\MastaEvent.cs" />
+    <Compile Include="Entity\MastaGenre.cs" />
+    <Compile Include="Entity\MastaOriginal.cs" />
+    <Compile Include="Entity\SearchEntity.cs" />
+    <Compile Include="Entity\Settings.cs" />
+    <Compile Include="Entity\TableBokkCharaInfo.cs" />
+    <Compile Include="Entity\TableBookInfo.cs" />
+    <Compile Include="Entity\MastaSize.cs" />
+    <Compile Include="Entity\TableBookJointInfo.cs" />
+    <Compile Include="Entity\TableBookOmunibusInfo.cs" />
+    <Compile Include="Entity\ViewBookInfoAbstract.cs" />
+    <Compile Include="Forms\EditSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditSetting.Designer.cs">
+      <DependentUpon>EditSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputInfo.Designer.cs">
+      <DependentUpon>InputInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditBuyWay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditBuyWay.Designer.cs">
+      <DependentUpon>MSEditBuyWay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditChara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditChara.Designer.cs">
+      <DependentUpon>MSEditChara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditCircle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditCircle.Designer.cs">
+      <DependentUpon>MSEditCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditEvent.Designer.cs">
+      <DependentUpon>MSEditEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditGenre.Designer.cs">
+      <DependentUpon>MSEditGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditOriginal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditOriginal.Designer.cs">
+      <DependentUpon>MSEditOriginal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSEditSize.Designer.cs">
+      <DependentUpon>MSEditSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistBuyWay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistBuyWay.Designer.cs">
+      <DependentUpon>MSRegistBuyWay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistCircle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistCircle.Designer.cs">
+      <DependentUpon>MSRegistCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistEvent.Designer.cs">
+      <DependentUpon>MSRegistEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistGenre.Designer.cs">
+      <DependentUpon>MSRegistGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistOriginal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistOriginal.Designer.cs">
+      <DependentUpon>MSRegistOriginal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistSize.Designer.cs">
+      <DependentUpon>MSRegistSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMenu.Designer.cs">
+      <DependentUpon>MastaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistChara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MastaMente\MSRegistChara.Designer.cs">
+      <DependentUpon>MSRegistChara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchBookInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchBookInfo.Designer.cs">
+      <DependentUpon>SearchBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchChara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchChara.Designer.cs">
+      <DependentUpon>SearchChara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchCircle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchCircle.Designer.cs">
+      <DependentUpon>SearchCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchEvent.Designer.cs">
+      <DependentUpon>SearchEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchOrigine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TableSearch\SearchOrigine.Designer.cs">
+      <DependentUpon>SearchOrigine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewInfoList.Designer.cs">
+      <DependentUpon>ViewInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewSearch.Designer.cs">
+      <DependentUpon>ViewSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BookJointInfoRepository.cs" />
+    <Compile Include="Repository\BookOmunibusInfoRepository.cs" />
+    <Compile Include="Repository\BookCharaInfoRepository.cs" />
+    <Compile Include="Repository\MSBuyWayRepository.cs" />
+    <Compile Include="Repository\MSCharaRepository.cs" />
+    <Compile Include="Repository\MSCircleRepository.cs" />
+    <Compile Include="Repository\MSEventRepository.cs" />
+    <Compile Include="Repository\MSGenreRepository.cs" />
+    <Compile Include="Repository\MSOriginalRepository.cs" />
+    <Compile Include="Repository\BookInfoRepository.cs" />
+    <Compile Include="Repository\MSSizeRepository.cs" />
+    <Compile Include="Tools\ImageCommon .cs" />
+    <Compile Include="Tools\Common.cs" />
+    <Compile Include="Tools\Global.cs" />
+    <Compile Include="Tools\OverForm.cs" />
+    <EmbeddedResource Include="Controls\DateTimeInputer.resx">
+      <DependentUpon>DateTimeInputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InfoPanel.resx">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditSetting.resx">
+      <DependentUpon>EditSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputInfo.resx">
+      <DependentUpon>InputInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSEditBuyWay.resx">
+      <DependentUpon>MSEditBuyWay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSEditChara.resx">
+      <DependentUpon>MSEditChara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSEditCircle.resx">
+      <DependentUpon>MSEditCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSEditEvent.resx">
+      <DependentUpon>MSEditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSEditGenre.resx">
+      <DependentUpon>MSEditGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSEditOriginal.resx">
+      <DependentUpon>MSEditOriginal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSEditSize.resx">
+      <DependentUpon>MSEditSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSRegistBuyWay.resx">
+      <DependentUpon>MSRegistBuyWay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSRegistCircle.resx">
+      <DependentUpon>MSRegistCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSRegistEvent.resx">
+      <DependentUpon>MSRegistEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSRegistGenre.resx">
+      <DependentUpon>MSRegistGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSRegistOriginal.resx">
+      <DependentUpon>MSRegistOriginal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSRegistSize.resx">
+      <DependentUpon>MSRegistSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMenu.resx">
+      <DependentUpon>MastaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MastaMente\MSRegistChara.resx">
+      <DependentUpon>MSRegistChara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableSearch\SearchBookInfo.resx">
+      <DependentUpon>SearchBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableSearch\SearchChara.resx">
+      <DependentUpon>SearchChara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableSearch\SearchCircle.resx">
+      <DependentUpon>SearchCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableSearch\SearchEvent.resx">
+      <DependentUpon>SearchEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TableSearch\SearchOrigine.resx">
+      <DependentUpon>SearchOrigine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewInfoList.resx">
+      <DependentUpon>ViewInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewSearch.resx">
+      <DependentUpon>ViewSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Sample.App.config" />
+    <None Include="Properties\DataSources\DojinManagementSystem.Repository.MSBuyWayRepository.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="setting.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Reboot.png" />
+    <Content Include="Images\Search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper">
+      <Version>2.0.123</Version>
+    </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>8.0.27</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
